@@ -1,0 +1,27 @@
+#! /bin/bash
+
+shopt -s globstar
+
+cd native/
+
+if [ -f "include/" ]; then
+    rm -rf include/
+fi
+
+javac -h include/ -d out/ ../src/**/*.java
+
+rm -rf out/
+
+mingw32-make
+
+cd bin/
+
+if [ -f "JSDL.jar" ]; then
+    rm -rf JSDL.jar
+fi
+
+jar cf JSDL.jar *.dll
+
+cd ../
+
+cd ../
