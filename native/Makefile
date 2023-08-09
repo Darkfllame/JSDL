@@ -4,7 +4,7 @@ CC=gcc
 RM=rm -rf
 
 all:
-	$(CC) -o $(EXE) src/*.c -Iinclude -Llib -lmingw32 -lSDL2
+	$(CC) -shared -o $(EXE) src/*.c -Iinclude -Iinclude/win32 -Llib -lmingw32 -lSDL2
 
 .PHONY: clean
 

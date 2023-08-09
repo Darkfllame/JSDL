@@ -1,0 +1,7 @@
+#! /bin/bash
+
+cd bin/
+
+java -jar JSDL.jar
+
+cd ../

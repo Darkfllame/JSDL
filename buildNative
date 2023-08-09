@@ -4,11 +4,11 @@ shopt -s globstar
 
 cd native/
 
-if [ -f "include/" ]; then
-    rm -rf include/
+if [ -f "include/native" ]; then
+    rm -rf include/native
 fi
 
-javac -h include/ -d out/ ../src/**/*.java
+javac -h include/native -d out/ ../src/**/*.java
 
 rm -rf out/
 
